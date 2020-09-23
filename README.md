@@ -166,7 +166,7 @@ For this portion of the activity, you should
 
 In this section you will add a new feature to the repository.
 
-You should create a file called `bootcamp_module08.contrib.student_${xx}` where you can implement your new feature.
+You should create a file called `bootcamp_module08/contrib/student_${xx}` where you can implement your new feature.
 
 Once you have done this, you can repeat the steps above in the **Modifying the behavior of an existing feature 
 in the repository**, except with a twist: you get to decide what your function does.

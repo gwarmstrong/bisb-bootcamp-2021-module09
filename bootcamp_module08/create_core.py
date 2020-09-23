@@ -57,7 +57,7 @@ if __name__ == '__main__':
         help='Number of digits to format number suffix to.'
     )
     args = parser.parse_args()
-    for i in range(args.start + 1, args.stop + 1):
+    for i in range(args.start, args.stop + 1):
         create_core_file_with_tests(
             f'{args.prefix}_{i:0{args.format_places}d}'
         )

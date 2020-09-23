@@ -66,7 +66,7 @@ There should be a file called `bootcamp_module08/core/student_${xx}.py`, with th
 ```python
 def count_substring(string, substring):
     """Counts the number of occurrences of `substring` in `string`
-    
+
     Parameters
     ----------
     string : str
@@ -78,20 +78,21 @@ def count_substring(string, substring):
     -------
     int
         The number of times `substring` occurs in `string`
-    
+
     """
     count = 0
 
     string_length = len(string)
     substring_length = len(substring)
     n_subsequences = string_length - substring_length + 1
-    
+
     for i in range(n_subsequences):
-        left_bound = string_length
-        right_bound = string_length + substring_length
-        if string[left_bound:right_bound] == substring:
+        left_bound = i
+        right_bound = i + substring_length
+        candidate_substring = string[left_bound:right_bound]
+        if candidate_substring == substring:
             count += 1
-    
+
     return count
 
 ```
@@ -99,6 +100,7 @@ def count_substring(string, substring):
 And there should be corresponding tests in `bootcamp_module08/core/tests/test_student_${xx}.py`
 ```python
 from bootcamp_module08.core.student_xx import count_substring
+
 
 def test_count_substring_single():
     test_string = "CGCTAGCGT"
@@ -108,6 +110,7 @@ def test_count_substring_single():
     observed_count = count_substring(test_string, test_substring)
     assert expected_count == observed_count
 
+
 def test_count_substring_repeated():
     test_string = "AGCTAGCAGT"
     test_substring = "AGC"
@@ -115,6 +118,7 @@ def test_count_substring_repeated():
     expected_count = 2
     observed_count = count_substring(test_string, test_substring)
     assert expected_count == observed_count
+
 
 def test_count_substring_none():
     test_string = "AGTCCCCTAGA"

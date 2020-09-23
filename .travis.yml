@@ -8,7 +8,7 @@ before_install:
   - conda info -a
 
 install:
-  - conda env create -n test-env
+  - conda create -n test-env
   - source activate test-env
   - pip install flake8 pytest
   - pip install -e .

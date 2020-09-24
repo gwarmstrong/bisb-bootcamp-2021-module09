@@ -24,7 +24,7 @@ def count_substring(string, substring):
         left_bound = i
         right_bound = i + substring_length
         candidate_substring = string[left_bound:right_bound]
-        if candidate_substring == substring:
+        if candidate_substring.lower() == substring.lower():
             count += 1
 
     return count

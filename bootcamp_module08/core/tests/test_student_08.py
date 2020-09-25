@@ -1,5 +1,12 @@
 from bootcamp_module08.core.student_08 import count_substring  # noqa
 
+def test_count_substring_cases():
+    test_string = "CGcTaGCgT"
+    test_substring = "TAg"
+
+    expected_count = 1
+    observed_count = count_substring(test_string, test_substring)
+    assert expected_count == observed_count
 
 def test_count_substring_single():
     test_string = "CGCTAGCGT"

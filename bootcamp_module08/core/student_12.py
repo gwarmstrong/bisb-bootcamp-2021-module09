@@ -16,6 +16,9 @@ def count_substring(string, substring):
     """
     count = 0
 
+    string = string.lower()
+    substring = substring.lower()
+
     string_length = len(string)
     substring_length = len(substring)
     n_subsequences = string_length - substring_length + 1
@@ -24,7 +27,7 @@ def count_substring(string, substring):
         left_bound = i
         right_bound = i + substring_length
         candidate_substring = string[left_bound:right_bound]
-        if candidate_substring.lower() == substring.lower():
+        if candidate_substring == substring:
             count += 1
 
     return count

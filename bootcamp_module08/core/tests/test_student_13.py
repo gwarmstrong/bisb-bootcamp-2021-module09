@@ -26,3 +26,12 @@ def test_count_substring_none():
     expected_count = 0
     observed_count = count_substring(test_string, test_substring)
     assert expected_count == observed_count
+
+
+def test_count_case_variation():
+    test_string = "acgcttACgt"
+    test_substring = "AcG"
+
+    expected_count = 2
+    observed_count = count_substring(test_string, test_substring)
+    assert expected_count == observed_count

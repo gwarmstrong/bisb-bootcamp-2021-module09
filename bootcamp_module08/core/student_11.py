@@ -1,5 +1,6 @@
 def count_substring(string, substring):
     """Counts the number of occurrences of `substring` in `string`
+       Modified on 9/25/20 to be case insensitive
 
     Parameters
     ----------
@@ -23,8 +24,8 @@ def count_substring(string, substring):
     for i in range(n_subsequences):
         left_bound = i
         right_bound = i + substring_length
-        candidate_substring = string[left_bound:right_bound]
-        if candidate_substring == substring:
+        candidate_substring = string[left_bound:right_bound].lower()
+        if candidate_substring == substring.lower():
             count += 1
 
     return count

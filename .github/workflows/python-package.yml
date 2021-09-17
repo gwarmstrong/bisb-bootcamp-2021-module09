@@ -36,9 +36,9 @@ jobs:
       run: |
         conda create -n test-bootcamp
         conda activate test-bootcamp
-        pip install nose
+        pip install pytest
     - name: Tests
       shell: bash -l {0}
       run: |
         conda activate test-bootcamp
-        nosetests
+        py.test

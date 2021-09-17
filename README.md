@@ -1,4 +1,4 @@
-# bisb-bootcamp-2020-module08
+# bisb-bootcamp-2021-module09
 
 
 
@@ -23,7 +23,7 @@ The major steps involved in this tutorial will be:
 A fork starts as a copy of another repository, but gives you administrative privileges,
 so you can change the code and commit history however you like.
 
-- Navigate to this repository: https://github.com/gwarmstrong/bisb-bootcamp-2020-module08
+- Navigate to this repository: https://github.com/gwarmstrong/bisb-bootcamp-2021-module09
 - Fork it (should fork to your github account)
 
   ![](images/fork-a-repo.png)
@@ -35,12 +35,12 @@ commit history directly on your own machine.
 - Clone the repository
 ```bash
 $ GIT_USERNAME=<your-git-user-name-here>
-$ git clone https://github.com/${GIT_USERNAME}/bisb-bootcamp-2020-module08.git
-$ cd bisb-bootcamp-2020-module08
+$ git clone https://github.com/${GIT_USERNAME}/bisb-bootcamp-2021-module09.git
+$ cd bisb-bootcamp-2021-module09
 ```
 - Set the upstream remote (lets you pull code from the original owner's fork)
 ```bash
-$ git remote add upstream https://github.com/gwarmstrong/bisb-bootcamp-2020-module08.git
+$ git remote add upstream https://github.com/gwarmstrong/bisb-bootcamp-2021-module09.git
 ```
 
 - You can also install the python package in this directory at this time.
@@ -61,7 +61,7 @@ Before making any changes, you should checkout a new branch with a name like `BR
 $ git checkout -b $BRANCHNAME
 ```
 
-There should be a file called `bootcamp_module08/core/student_${xx}.py`, with the following contents:
+There should be a file called `bootcamp_module09/core/student_${xx}.py`, with the following contents:
 
 ```python
 def count_substring(string, substring):
@@ -97,9 +97,9 @@ def count_substring(string, substring):
 
 ```
 
-And there should be corresponding tests in `bootcamp_module08/core/tests/test_student_${xx}.py`
+And there should be corresponding tests in `bootcamp_module09/core/tests/test_student_${xx}.py`
 ```python
-from bootcamp_module08.core.student_xx import count_substring
+from bootcamp_module09.core.student_xx import count_substring
 
 
 def test_count_substring_single():
@@ -155,7 +155,7 @@ For this portion of the activity, you should
 5. Once you are satisfied with your changes, you should make sure to commit them to your branch:
     ```bash
     # stage your changes
-    $ git add bootcamp_module08/core/student_${xx}.py bootcamp_module08/core/tests/test_student_${xx}.py
+    $ git add bootcamp_module09/core/student_${xx}.py bootcamp_module09/core/tests/test_student_${xx}.py
     # commit with an informative message
     $ git commit -m "ENH make count_substring case insensitive"
     ```
@@ -166,7 +166,7 @@ For this portion of the activity, you should
 
 In this section you will add a new feature to the repository.
 
-You should create a file called `bootcamp_module08/contrib/student_${xx}` where you can implement your new feature.
+You should create a file called `bootcamp_module09/contrib/student_${xx}` where you can implement your new feature.
 
 Once you have done this, you can repeat the steps above in the **Modifying the behavior of an existing feature 
 in the repository**, except with a twist: you get to decide what your function does.
@@ -189,7 +189,7 @@ $ git push --set-upstream origin $BRANCHNAME
 
 (Note: origin tells git that it should push to your GitHub repo)
 
-You can then navigate to `https://github.com/gwarmstrong/bisb-bootcamp-2020-module08/`.
+You can then navigate to `https://github.com/gwarmstrong/bisb-bootcamp-2021-module09/`.
 
 If you have pushed recently, you may notice a yellow/box that tells you that you can open a pull request.
 
@@ -202,12 +202,13 @@ Otherwise, you can
 
 Then, provide a description of your PR (including your student number, for this activity) and click `Create pull request`.
 
-After submitting, make sure the automatic checks (Travis) pass (may take a couple minutes). If they fail, make sure your code
+After submitting, make sure the automatic checks (GitHub Actions) pass (may 
+take a couple minutes). If they fail, make sure your code
 changes are passing the test suite and style checking locally.
 
 If you make any changes after opening a PR, you can always push more commits. The PR will automatically be updated
-and the Travis checks will automatically be restarted.
+and the CI checks will automatically be restarted.
 
-Once your Travis checks pass, or if you are having issues, let the instructors know!
+Once your CI checks pass, or if you are having issues, let the instructors know!
 
 We will try to provide feedback on your pull requests, as available.

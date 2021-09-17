@@ -21,7 +21,7 @@ def create_core_file_with_tests(module):
     shutil.copyfile(starter_code_path, module_path)
 
     template = get_test_template('bootcamp_module08.templates',
-                                 'test_count_substring.py')
+                                 'template_test_count_substring.py')
 
     test_contents = template.render(module=module) + '\n'
     test_package = 'bootcamp_module08.core.tests'

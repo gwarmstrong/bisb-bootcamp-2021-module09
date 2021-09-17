@@ -40,5 +40,5 @@ jobs:
     - name: Tests
       shell: bash -l {0}
       run: |
-        conda activate test-friendly-guacamole
+        conda activate test-bootcamp
         nosetests
